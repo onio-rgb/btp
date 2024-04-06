@@ -9,22 +9,22 @@ Original file is located at
 
 # !pip install spams
 
-!pip install torchstain
+# !pip install torchstain
 
 import tensorflow as tf
 
-tf.compat.v1.enable_eager_execution(
-    config=None, device_policy=None, execution_mode=None
-)
-tf.executing_eagerly()
+# tf.compat.v1.enable_eager_execution(
+#     config=None, device_policy=None, execution_mode=None
+# )
+# tf.executing_eagerly()
 
 # !pip uninstall numpy
 # !pip install numpy==1.23.1
 
-from google.colab import drive
-drive.mount('/content/drive', force_remount=True)
+# from google.colab import drive
+# drive.mount('/content/drive', force_remount=True)
 
-cd '/content/drive/MyDrive/NucleiSegNet'
+# cd '/content/drive/MyDrive/NucleiSegNet'
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -394,8 +394,8 @@ def patch_join(out_im):
 
     return out_full,test_ids
 
-if __name__ == '__main__':
-    stain_norm_patch()
+# if __name__ == '__main__':
+#     stain_norm_patch()
 
 import tensorflow as tf
 from tensorflow.keras import *
@@ -630,7 +630,7 @@ def create_model():
 
     return model
 
-!pip install tensorflow_addons
+# !pip install tensorflow_addons
 
 # !pip install --upgrade keras
 
@@ -1360,7 +1360,7 @@ from tqdm import tqdm
 from tensorflow.keras.callbacks import *
 from google.colab.patches import cv2_imshow
 
-from google.colab.patches import cv2_imshow
+# from google.colab.patches import cv2_imshow
 warnings.filterwarnings('ignore')
 # Path for the stain normalized image patches normalized image
 test_data_path = '/content/TestData/'
@@ -1406,7 +1406,7 @@ for tes in test_generator:
     predicted2 = np.expand_dims(predicted2, -1)
     out_im.append(predicted2)
 
-from google.colab.patches import cv2_imshow
+# from google.colab.patches import cv2_imshow
 
 # Creating full sized segmented image (actual size) from segmented patches
 print('Joining the segmented patches to original sized masks ===========>')
@@ -1422,7 +1422,7 @@ for n, id_ in tqdm(enumerate(ids_test), total=len(ids_test)):
 
 print('Segmented images are saved in {}'.format(sv_path))
 
-cv2_imshow(out_full[0]*255)
+# cv2_imshow(out_full[0]*255)
 
 # Computing scores (DICE and IOU)
 print('Scores for the segmented output ===========>')
@@ -1459,9 +1459,9 @@ import warnings
 import tensorflow
 from tqdm import tqdm
 from tensorflow.keras.callbacks import *
-from google.colab.patches import cv2_imshow
+# from google.colab.patches import cv2_imshow
 
-from google.colab.patches import cv2_imshow
+# from google.colab.patches import cv2_imshow
 warnings.filterwarnings('ignore')
 # Path for the stain normalized image patches normalized image
 test_data_path = '/content/TestData/'
@@ -1507,7 +1507,7 @@ for tes in test_generator:
     predicted2 = np.expand_dims(predicted2, -1)
     out_im.append(predicted2)
 
-from google.colab.patches import cv2_imshow
+# from google.colab.patches import cv2_imshow
 
 # Creating full sized segmented image (actual size) from segmented patches
 print('Joining the segmented patches to original sized masks ===========>')
@@ -1523,7 +1523,7 @@ for n, id_ in tqdm(enumerate(ids_test), total=len(ids_test)):
 
 print('Segmented images are saved in {}'.format(sv_path))
 
-cv2_imshow(out_full[0]*255)
+# cv2_imshow(out_full[0]*255)
 
 # Computing scores (DICE and IOU)
 print('Scores for the segmented output ===========>')
@@ -1550,5 +1550,4 @@ for _,i in enumerate(ids_test):
 print("mean of jaccard: ",mean(scr_met['IOU']))
 print("mean of dice: ",mean(scr_met['DICE']))
 
-!python overlay_mask.py
 
